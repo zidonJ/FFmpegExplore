@@ -23,18 +23,12 @@
 
 @implementation ViewController
 
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view, typically from a nib.
-//    av_register_all();
-//}
 
 - (void)loadView
 {
-    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.backgroundColor = [UIColor whiteColor];
-    //self.tableView.backgroundView = [[UIImageView alloc] initWithImage:image];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
